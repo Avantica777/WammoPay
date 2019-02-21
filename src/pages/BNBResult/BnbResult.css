@@ -1,0 +1,143 @@
+.result-form{
+	position: relative;
+    top: 72px;
+	padding: 20px 24%;
+}
+
+.wpay-form-header strong{
+	font-size: 12px;
+}
+
+.wpay-form-header ol{
+	font-size: 12px;
+}
+
+.result-form .group {
+	margin: 0 0 20px 0 !important;
+}
+
+.result-form h5, h6 {
+    font-size: 1em;
+}
+.result-form h1, h2, h3, h4, h5, h6 {
+    margin: .1em 0;
+    line-height: normal;
+}
+.externalNote h5{
+	font-size: 13px;
+}
+.externalNote p{
+	font-size: 12px;
+}
+
+.group h5{
+	font-size: 13px;
+}
+
+.group p{
+	font-size: 12px;
+}
+
+.editButtonLink{
+	padding: 0px 5px;
+	text-decoration: none;
+}
+
+.morebuttonscontent {
+    float: left;
+    width: 513px;
+    margin-left: 20px;
+}
+
+.morebuttonscontent strong{
+	font-size: 13px;
+}
+
+/* .tab-content{
+	border: 1px solid #333;
+} */
+
+#result-pane h3 {
+	color : white;
+	background-color: #428bca;
+	padding : 5px 15px;
+}
+
+#tt-email{
+	width: 100%;
+}
+
+.imgBorderFull{
+	margin-left: 15px;
+}
+
+.tab-pane {
+	margin: 30px 0px !important;
+    clear: both;
+    border: 1px solid #ccc !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-pane-content{
+	border: 1px solid #f3f3f3;
+    border-right: 256px solid #f3f3f3;
+}
+
+.selectCodeContainer {
+    margin: 0 !important;
+    padding-top: 10px;
+	_margin-top: 18px !important;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.tab-pane-content .leftModule{
+    padding-bottom: 15px;
+}
+
+.tab-pane-content .rightModule{
+	position: absolute;
+    width: 256px;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.leftModule .textarea{
+	width: 100%;
+}
+
+.rightModule .heading {
+	text-align: center;
+	border: 1px solid #aaa;
+	margin: 1px 0px !important;
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+	.result-form {
+		position: relative;
+		top: 72px;
+		padding: 20px 15% !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .result-form {
+		position: relative;
+		top: 72px;
+		padding: 20px 8% !important;
+	}
+
+	.tab-pane-content {
+		border-right: 160px solid #f3f3f3 !important;
+	}
+
+	.tab-pane-content .rightModule {
+		width: 160px !important;
+	}
+
+}

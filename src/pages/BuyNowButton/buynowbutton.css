@@ -1,0 +1,888 @@
+body, ul {
+	margin: 0;
+	padding: 0;
+	font-family: pp-sans-small-regular,Helvetica Neue,Arial,sans-serif;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Golden Sans Light";
+	/* src: url("../fonts/GoldenSansLight.otf"); */
+	src: url("../../assets/fonts/GoldenSansLight.otf") format("opentype");
+}
+
+.main-responsive{
+	display: block;
+}
+
+#pageslide {
+	margin-top: -12px;
+}
+
+.row-first{
+	padding-top: 72px;
+	margin-top: 0;
+	text-align: center;
+	float: none;
+	background: #333;
+	color: #fff;
+}
+
+.containerCentered{
+	box-sizing: content-box;
+	padding-left: 15%;
+	padding-right: 15%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.row-first .editorial-container {
+	height: 25.71428571em;
+	line-height: 25.71428571em;
+	padding-right: 2%;
+}
+
+.editorial-cell {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.5em;
+	width: 100%\9;
+	width: 100%;
+}
+
+.row-first .x-large,h2{
+	font-size: 2.857rem;
+	line-height: 1.25em;
+	/* font-family: pp-sans-big-light,Helvetica Neue,Arial,sans-serif; */
+	font-family: "Golden Sans Light";
+	font-weight: 400;
+}
+
+.x-large, h2 {
+	font-size: 40px;
+	font-size: 2.857rem;
+	line-height: 1.25em;
+}
+
+.x-large, h1, h2 {
+	letter-spacing: .02em;
+}
+
+.headline, h1, h2, h3, h4, h5, h6 {
+	font-family: pp-sans-big-light,Helvetica Neue,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.contentpara{
+	font-size: 18px;
+	color:rgb(230, 230, 230);
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+}
+
+.row-first p a{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+	/* padding: 15px 25px; */
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	position: relative;
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-ms-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
+}
+
+.button-panel{
+	float: left;
+	width: 100%;
+	padding: 90px 0px;
+	background: #fff;
+    position: relative;
+    z-index: 2;
+	transform: translate(0,0);
+	border-bottom: 1px dotted #333;
+}
+
+.btn-panel-heading{
+	-moz-box-sizing: content-box;
+    box-sizing: content-box;
+	margin-right: auto;
+	margin-left: auto;
+	box-sizing:content-box;
+	padding: 0px 15%;
+}
+
+.btn-panel-heading > h2{
+	color:rgb(44, 46, 47);
+	display:block;
+	font-family:pp-sans-big-light, "Helvetica Neue", Arial, sans-serif;
+	font-size:28px;
+	font-weight:400;
+	height:35px;
+	letter-spacing:0.28px;
+	line-height:35px;
+	margin-block-end:0px;
+	margin-block-start:0px;
+	margin-bottom:0px;
+	margin-inline-end:0px;
+	margin-inline-start:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	padding-bottom:0px;
+	padding-top:0px;
+	text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased;
+}
+
+.btn-panel-heading > p {
+	color:rgb(44, 46, 47);
+	display:block;
+	font-family:pp-sans-small-regular, "Helvetica Neue", Arial, sans-serif;
+	font-size:14.994px;
+	font-weight:400;
+	height:22px;
+	line-height:22.491px;
+	margin-block-end:0px;
+	margin-block-start:0px;
+	margin-bottom:0px;
+	margin-inline-end:0px;
+	margin-inline-start:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	padding-bottom:14px;
+	padding-top:4px;
+	text-size-adjust:100%;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
+}
+
+.checkout-button.b11 {
+    background-image: url(../../assets/img/Checkout-logo-large.png);
+}
+
+.checkout-button.b12 {
+    background-image: url(../../assets/img/Credit-logo-large.png);
+}
+
+.checkout-button.b21 {
+    background-image: url(../../assets/img/Checkout-logo-medium.png);
+}
+
+.checkout-button.b22 {
+    background-image: url(../../assets/img/Credit-logo-medium.png);
+}
+
+.checkout-button.b31 {
+    background-image: url(../../assets/img/logo_h_200x51.png);
+}
+
+.checkout-button.b32 {
+    background-image: url(../../assets/img/credit_logo_h_200x51.png);
+}
+
+.checkout-button {
+    display: block;
+    height: 44px;
+    width: 90%;
+    margin: 10px 0;
+    padding: 40px 0px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.checkout-button > span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -12px;
+}
+
+.btn-panel-container{
+	padding-left: 15%;
+    padding-right: 15%;
+    margin-right: auto;
+    margin-left: auto;
+	box-sizing: content-box;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	min-width: 600px;
+}
+
+.btn-panel-container .btn-panel-pane-left{
+    width: 49%;
+}
+
+.btn-panel-container .btn-panel-pane-right{
+    width: 49%;
+}
+
+.btn-panel-container [class*=btn-panel-pane-] {
+	float: left;
+    min-height: 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.build-btn-panel{
+	float: left;
+	width: 100%;
+	padding: 90px 0px;
+	background: #fff;
+    position: relative;
+    z-index: 2;
+    transform: translate(0,0);
+}
+
+.containerCentered {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.build-btn-panel [class*=span]:last-child:not(.btn) {
+    padding-right: 0;
+}
+
+.build-btn-panel [class*=span]:not(.btn) {
+    padding-right: 2%;
+}
+.build-btn-panel [class*=span]:first-child {
+    margin-left: 0;
+}
+.build-btn-panel .span12 {
+    width: 100%;
+}
+.build-btn-panel [class*=span] {
+    float: left;
+    margin-left: 2%;
+    min-height: 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container:after, .containerCentered:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.build-btn-panel .span6 {
+    width: 49%;
+}
+
+.contentPara{
+	font-size: 14px;
+}
+
+.containerCentered > .span6 > a{
+	color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.contentLink {
+    font-size: 15px;
+    font-size: 1.07142857rem;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 6px 0 0;
+    padding-left: 10px;
+}
+
+.page-footer{
+    padding: 40px 0;
+    z-index: 2;
+    background: #fff;
+    text-align: left;
+    transform: translate(0,0);
+}
+
+.containerCentered {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.container, .containerCentered {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-footer ul {
+    display: block;
+    clear: both;
+    margin: 0;
+}
+
+html[data-device-type=dedicated] .page-footer .footer-secondary, html[data-device-type=dedicated] .page-footer .footer-tertiary {
+    padding-top: 8px;
+}
+html[data-device-type=dedicated] .page-footer .footer-search, html[data-device-type=dedicated] .page-footer .footer-secondary {
+    float: left;
+}
+
+.footer-main{
+	border-bottom: 1px dotted;
+}
+
+ul.footer-main li {
+	margin: 0;
+	font-size: 16px;
+}
+
+.page-footer ul li {
+    display: inline-block;
+    list-style-type: none;
+    line-height: 26px;
+    vertical-align: middle;
+    margin: 0 18px 0 0;
+}
+
+.secondaryLink a:not(.btn), a.secondaryLink {
+	color: #666;
+}
+.page-footer ul li a {
+    display: block;
+    padding: 9px 0;
+    font-weight: 700;
+    text-decoration: none;
+}
+.footer-main li a {
+    margin: 0 26px 0 0;
+}
+
+.secondaryLink a:active:not(.btn), .secondaryLink a:focus:not(.btn), .secondaryLink a:hover:not(.btn), a.secondaryLink:active, a.secondaryLink:focus, a.secondaryLink:hover {
+    color: #444;
+    text-decoration: underline;
+}
+.page-footer .footer-copyright, .page-footer .footer-secondary li a, .page-footer .footer-tertiary li a {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0;
+}
+
+hr {
+    background-image: linear-gradient(to right,silver 50%,rgba(255,255,255,0) 40%);
+    background-position: top;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    height: 1px;
+    border-top: 0;
+    border-bottom: 0;
+}
+hr {
+    border-left: 0;
+    border-right: 0;
+    margin: 0;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.country-selector {
+    float: right;
+	text-align: right;
+	margin-top: 8px !important;
+}
+
+.country-selector .US, .country-selector .unitedstates {
+    background-position: 5px -383px;
+}
+
+.country-selector .country {
+    display: inline-block;
+    overflow: hidden;
+    width: 32px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    text-indent: -999em;
+    text-align: left;
+	background-repeat: no-repeat;
+    /* background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat; */
+    background-color: transparent;
+}
+
+.wammopay-logo {
+	display: inline-block;
+	width: 136px;
+	height: 43px;
+	overflow: hidden;
+	text-indent: -999em;
+	background: transparent url("../../assets/img/WPayLowRes.png") center center no-repeat;
+	background-size: 90pt 45px;
+	vertical-align: middle;
+	padding-top: 5px;
+	margin-top: -7px; 
+	position: absolute;
+	top: 21px; 
+	left: 25px;
+}
+
+.wammopay-logo-wrapper{
+	width: auto;
+	display: inline-block;
+}
+
+/**********************Modal Dialog CSS*****************************/
+
+.modalDialog{
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+    left: 0;
+    opacity: 0;
+	background: rgba(0,0,0,0.8);
+    z-index: 99999;
+	pointer-events: none;
+}
+
+.modalDialog > div {
+	width: 40%;
+	position: relative;
+	margin: 10% auto;
+	border-radius: 10px;
+	background: #fff;
+	padding: 0px 5%;
+}
+
+.modalDialog > div > div > .dlg-header > h4{
+	position: relative;
+	top: 20px;
+	margin: 10px;
+}
+
+.dlg-container textarea{
+	position: relative;
+	top: 25px;
+	width: 60%;	
+    padding: 10px 15px 5px 15px;
+}
+
+.dlg-comment{
+	margin: 30px 0px;
+}
+
+.dlg-comment h6{
+	position: relative;
+	padding: 10px;
+	bottom: 10px;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog .close {
+	background: #ccc;
+	color: #FFFFFF;
+	line-height: 24px;
+	position: absolute;
+	text-align: center;
+	top: 6px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 5px;
+	font-size: 18px;
+	right: .4em;
+    width: 25px;
+    height: 25px;
+}
+
+.modalDialog .close:hover { 
+	background: #111;
+	-moz-box-shadow: 1px 1px 1px #000;
+	-webkit-box-shadow: 1px 1px 1px #000;
+	box-shadow: 1px 1px 1px #000;
+}
+
+/*******************************************************************/
+
+@media screen and (min-width:991px){
+	
+	#openPageslide { display: none; }
+		
+	#pageslide { display: block !important; border-right: 2px solid #063ede;}
+
+	.pageslideBg { display: none !important; }
+
+	/******* Class Styling *******/
+	.wamp-header-container{
+		font-family: pp-sans-big-medium,Helvetica Neue,Arial,sans-serif;
+		font-weight: 400;
+		font-variant: normal;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: .9375rem;
+		padding-right: .9375rem;
+	}
+
+	.wammopay-logo {
+		display: inline-block;
+		width: 136px;
+		height: 43px;
+		overflow: hidden;
+		text-indent: -999em;
+		background: transparent url("../../assets/img/WPayLowRes.png") center center no-repeat;
+		background-size: 90pt 45px;
+		vertical-align: middle;
+		padding-top: 5px;
+		margin-top: -7px; 
+		position: absolute;
+		top: 21px; 
+		left: 25px;
+	}
+
+	.wammopay-logo-wrapper{
+		width: auto;
+		display: inline-block;
+	}
+
+	.main-menu ul:after {
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	.main-menu ul li {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+
+	.main-menu.align-right ul li {
+		float: right;
+	}
+	.main-menu.align-center ul {
+		text-align: center;
+	}
+	.main-menu ul li a {
+		color: #ffffff;
+		text-decoration: none;
+		display: block;
+		/* padding: 15px 25px; */
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 14px;
+		position: relative;
+		-webkit-transition: color .25s;
+		-moz-transition: color .25s;
+		-ms-transition: color .25s;
+		-o-transition: color .25s;
+		transition: color .25s;
+	}
+	.main-menu ul li a:hover:before {
+		width: 100%;
+	}
+	.main-menu > ul > li > a:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 3px;
+		width: 0;
+		background: #fff;
+		-webkit-transition: width .25s;
+		-moz-transition: width .25s;
+		-ms-transition: width .25s;
+		-o-transition: width .25s;
+		transition: width .25s;
+	}
+
+	.main-menu ul li.last > a:after,
+	.main-menu ul li:last-child > a:after {
+		display: none;
+	}
+	.main-menu ul li.active a {
+		color: rgb(135, 161, 146);
+	}
+	.main-menu ul li.active a:before {
+		width: 100%;
+	}
+	.main-menu.align-right li.last > a:after,
+	.main-menu.align-right li:last-child > a:after {
+		display: block;
+	}
+	.main-menu.align-right li:first-child a:after {
+		display: none;
+	}
+	html[data-device-type=dedicated] .containerCentered {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
+	.navBox ul {
+		max-width: 990px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width:1350px){
+	.wammopay-logo {
+		display: inline-block;
+		width: 136px;
+		height: 43px;
+		overflow: hidden;
+		text-indent: -999em;
+		background: transparent url("../../assets/img/WPayLowRes.png") center center no-repeat;
+		background-size: 90pt 45px;
+		vertical-align: middle;
+		padding-top: 5px;
+		margin-top: -7px; 
+		position: absolute;
+		top: 21px; 
+		left: 50%;
+	}
+	
+	.wammopay-logo-wrapper{
+		width: auto;
+		display: inline-block;
+	}
+
+	header::after{
+		width: 100%;
+		position: absolute;
+		border-bottom: 1px solid rgba(255,255,255,.3);
+		top: 72px;
+		box-sizing: inherit;  
+	}
+}
+
+@media screen and (max-width: 1090px){
+	html[data-device-type=dedicated] .containerCentered {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
+	.checkout-button > span {
+		display: block;
+		position: absolute;
+		top: 90%;
+		left: 30%;
+		margin-top: -12px;
+	}
+
+}
+
+@media screen and (max-width: 768px){
+
+	.accordion .card .card-header h5 {
+		font-size: 14px;
+		font-family: 'Times New Roman', Times, serif;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	.accordion .card .card-header button {
+		font-size: 13px !important;
+		font-family: 'Times New Roman', Times, serif;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	.card a{
+		font-size: 12px !important;
+	}
+
+	.shipping span{
+		font-size: 12px !important;
+	}
+
+	.card select,input{
+		font-size: 11px !important;
+	}
+
+	.customizeButtonSection {
+		border: 1px solid #f3f3f3 !important;
+		border-right: 150px solid #f3f3f3 !important;
+	}
+
+	.buyerViewSection {
+		position: absolute;
+		width: 150px !important;
+		right: 0;
+		top: 0;
+		text-align: center;
+	}
+	
+	.paymentPopup > div {
+		width: 80% !important;
+		height: 40% !important;
+		margin: 20% auto !important;
+	}
+}
+
+@media screen and (max-width: 600px){
+	
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+        left: 0;
+        opacity: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		pointer-events: none;
+	}
+
+	.modalDialog > div {
+		width: 80%;
+		position: relative;
+		margin: 20% auto;
+		border-radius: 4px;
+		background: #fff;
+	}
+
+	.modalDialog .close {
+		background: #ccc;
+		color: #FFFFFF;
+		line-height: 24px;
+		position: absolute;
+		text-align: center;
+		top: 11px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 5px;
+		font-size: 18px;
+		right: .4em;
+		width: 25px;
+		height: 25px;
+	}
+
+	.dlg-container textarea {
+		position: relative;
+		top: 40px;
+		width: 100%;
+		padding: 10px 15px 5px 15px;
+	}
+
+	.dlg-comment {
+		margin: 48px 0px;
+	}
+	
+	.wammopay-logo-wrapper{
+		width: auto;
+		display: inline-block;
+	}
+
+	.page-footer .footer-copyright, .page-footer .footer-secondary li a, .page-footer .footer-tertiary li a {
+		font-weight: 400;
+		font-size: 10px;
+		padding: 0;
+	}
+
+	.btn-panel-heading > h2{
+		color:rgb(44, 46, 47);
+		display:block;
+		font-family:pp-sans-big-light, "Helvetica Neue", Arial, sans-serif;
+		font-size:18px;
+		font-weight:400;
+		height:36px;
+		letter-spacing:0.28px;
+		line-height:35px;
+		margin-block-end:0px;
+		margin-block-start:0px;
+		margin-bottom:0px;
+		margin-inline-end:0px;
+		margin-inline-start:0px;
+		margin-left:0px;
+		margin-right:0px;
+		margin-top:0px;
+		padding-bottom:0px;
+		padding-top:0px;
+		text-size-adjust:100%;
+		-webkit-font-smoothing:antialiased;
+	}
+
+	.btn-panel-container{
+		padding-left: 15%;
+		padding-right: 15%;
+		margin-right: auto;
+		margin-left: auto;
+		box-sizing: content-box;
+		margin-top: 60px;
+		margin-bottom: 30px;
+		min-width: 600px;
+	}
+}
+
+h1 { margin:30px auto; text-align:center;}
+
+.wpay-form-header strong{
+	font-size: 12px;
+}
+
+.wpay-form-header ol{
+	font-size: 12px;
+}
+
+.externalNote h5{
+	font-size: 13px;
+}
+.externalNote p{
+	font-size: 12px;
+}
+
+.group h5{
+	font-size: 13px;
+}
+
+.group p{
+	font-size: 12px;
+}
+
+.morebuttonscontent {
+    float: left;
+    width: 513px;
+    margin-left: 20px;
+}
+
+.morebuttonscontent strong{
+	font-size: 13px;
+}

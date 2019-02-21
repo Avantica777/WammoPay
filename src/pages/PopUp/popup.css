@@ -1,0 +1,361 @@
+.paymentPopup {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:1;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	/* pointer-events: none; */
+}
+.paymentPopup:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.paymentPopup > div {
+	width: 50%;
+	height: 75%;
+	position: relative;
+	margin: 8% auto;
+	border-radius: 10px;
+	background: -moz-linear-gradient(#F7FAFC, #F7FAFC);
+	background: -webkit-linear-gradient(#F7FAFC, #F7FAFC);
+	background: -o-linear-gradient(#F7FAFC, #F7FAFC);
+	box-shadow: 2px 0px 29px 3px #777576;
+}
+
+.paymentPopup .close {
+	color: #9492A1;
+	line-height: 20px;
+	position: absolute;
+	right: 13px;
+	text-align: center;
+	top: 13px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: 400;
+    font-size: 20px;
+    z-index: 9999999;
+}
+
+.paymentPopup .close:hover { 
+    /* background: #00d9ff; */
+    box-shadow: 1px 2px 4px 1px #f52145;
+    border-radius: 3px;
+	-moz-box-shadow: 1px 1px 1px #000;
+	-webkit-box-shadow: 1px 1px 1px #000;
+	box-shadow: 1px 1px 1px #000;
+}
+
+/**********************Header Style***********************/
+.paymentPopup .c-header{
+	width: 100%;
+	height: 12%;
+	background: #fff;
+	box-shadow: 0px 1px 3px 0px #5b6fd096;
+	margin-bottom: 15px;
+}
+
+.wammo-popup-logo{
+	position: relative;
+    top: 11%;
+    bottom: 28px;
+    left: 38%;
+    height: 80%;
+}
+
+.paymentPopup #p-title{
+	position: relative;
+	font-size: 35px;
+	font-family: Montserrat;
+    font-weight: bold;
+	color: #5B6FD0;
+	padding-top: 4%;
+	padding-bottom: 0%;
+	padding-left: 35%;
+	padding-right: 35%;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transform: translate3d(0,0,0) !important;
+	transform: translate3d(0,0,0) !important;
+}
+
+.paymentPopup #p-author{
+	position: relative;
+	font-size: 15px;
+	font-family: Montserrat;
+	color: #353346;
+	padding-top: 5px;
+	padding-left: 40%;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transform: translate3d(0,0,0) !important;
+	transform: translate3d(0,0,0) !important;
+}
+
+/*********************Body Style**************************/
+
+.paymentPopup .b-row{
+	width: 100%;
+	height: 7%;
+	padding: 1% 10% 1% 6%;
+	margin: 1%;
+}
+
+.paymentPopup .b-row > label{
+	width: 30%;
+    position: absolute;
+    left: 7%;
+    height: 6%;
+    color: #5B6FD0;
+    padding: 0% 10% 0% 0%;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.paymentPopup .b-row > input{
+	position: absolute;
+    left: 25%;
+	height: 6%;
+	width: 60%;
+	right: 7%;
+	border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 15px;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+}
+
+.paymentPopup .b-row > #userCountry{
+	position: absolute;
+    left: 25%;
+	height: 6%;
+	width: 60%;
+	right: 7%;
+	border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 15px;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+}
+
+.paymentPopup .b-row > #userCountry:hover{
+	box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.paymentPopup .b-row > i {
+	line-height: 45px;
+    width: 50px;
+    font-size: 36px;
+    position: absolute;
+	right: 15%;
+	opacity: 0.6;
+	color: #9090c4;
+}
+
+.paymentPopup input[type=email]:focus{
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.paymentPopup input[type=text]:focus{
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.paymentPopup input[type=email]:focus{
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.paymentPopup .b2-row{
+	width: 100%;
+	height: 6%;
+	padding: 1% 10% 1% 6%;
+	margin: 1%;
+}
+
+.paymentPopup .b2-row #expireDate{
+	position: absolute;
+	left: 25%;
+    height: 6%;
+    width: 20%;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 15px;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+}
+
+.paymentPopup .b2-row #mmyy{
+	position: absolute;
+	height: 6%;
+	color: #5B6FD0;
+    padding: 0% 10% 0% 0%;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.paymentPopup .b2-row #cvcNum{
+	position: absolute;
+	left: 65%;
+    height: 6%;
+    width: 20%;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 15px;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+}
+
+.paymentPopup .b2-row #cvc{
+	position: absolute;
+	left: 55%;
+	height: 6%;
+	color: #5B6FD0;
+    padding: 0% 10% 0% 0%;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.paymentPopup .b2-row #userCity{
+	position: absolute;
+	left: 25%;
+    height: 6%;
+    width: 20%;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 15px;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+}
+
+.paymentPopup .b2-row #label-user-city{
+	position: absolute;
+	height: 6%;
+	color: #5B6FD0;
+    padding: 0% 10% 0% 0%;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.paymentPopup .b2-row #userState{
+	position: absolute;
+	left: 65%;
+    height: 6%;
+    width: 20%;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 15px;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+}
+
+.paymentPopup .b2-row #userState:hover{
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.paymentPopup .b2-row #label-user-state{
+	position: absolute;
+	left: 55%;
+	height: 6%;
+	color: #5B6FD0;
+    padding: 0% 10% 0% 0%;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.paymentPopup .checkButton{
+	position: absolute;
+	left: 25%;
+	color: #9492A1;
+	font-size: 14px;
+}
+
+.paymentPopup .checkButton label{
+	margin: 0.5rem auto;
+}
+
+.paymentPopup > div > input[type=button]{
+	position: absolute;
+	top: 90%;
+    right: 15%;
+    width: 33%;
+    height: 7%;
+    color: #F7FAFC;
+    font-size: 15px;
+    font-family: "Montserrat";
+    background: #5B6FD0;
+    box-shadow: 0px 1px 18px 0px #5B6FD0;
+    border-radius: 5px;
+	border-width: 0px !important;
+	cursor: pointer;
+}
+
+.paymentPopup > div > input[type=button]:hover{
+    color: #8ff78f;
+    background: #5B6FD0;
+    box-shadow: 0px 2px 25px 0px #5B6FD0;
+    border-radius: 5px;
+    border-width: 0px !important;
+}
+
+/*****************Valid & Invalid*************/
+.paymentPopup .validCardnumber{
+	box-shadow:0 0 8px 0 dodgerBlue !important;
+}
+
+.paymentPopup .invalidCardnumber{
+	box-shadow:0 0 8px 0 #f52145 !important;
+}
+/*********************************************/
+
+a{
+    cursor: pointer;
+}

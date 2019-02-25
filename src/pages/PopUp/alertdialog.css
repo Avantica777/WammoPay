@@ -49,7 +49,7 @@
     text-decoration: none;
 	background: #5B6FD0;
 	font-size: 15px;
-	color: white;
+	color: white !important;
 	padding: 10px 58px;
 }
 @media screen and (max-width: 1520px){

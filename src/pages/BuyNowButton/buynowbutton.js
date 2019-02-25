@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './buynowbutton.css';
 
 import WammoHeader from '../Layouts/WammoBuyNow/WammoBNHeader/WammoHeader'
+import WammoFooter from '../Layouts/WammoBuyNow/WammoBNFooter/WammoFooter';
 
 class BuyNowButton extends Component{
     constructor(props) {
@@ -158,6 +159,7 @@ class BuyNowButton extends Component{
                         </div>
                     </div>
                 </div>
+                <WammoFooter/>
             </div>
         );
     }

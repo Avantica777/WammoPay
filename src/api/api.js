@@ -4,32 +4,25 @@ import Config from '../config'
 const WammoPayAPI = {
     baseApi(params, callback) {
         axios.defaults.baseURL = Config.BACKEND_API_URL
-        axios.defaults.headers.post['Content-Type'] = 'application/json'
 /*
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': 'http://localhost:3000',
             'Access-Control-Allow-Credentials': 'true',
 */
         const authHeader = () => ({
+            "Authorization": "Basic ezQ1MDREMThGLUUzNUItNENFMC05QTY0LTUzRTY2Q0E4M0ExNH06",
             "Content-Type": "application/json",
-            'Access-Control-Allow-Origin': "*",
-            'Access-Control-Allow-Headers': 'Content-Type',
-            "Authorization": "Basic ezQ1MDREMThGLUUzNUItNENFMC05QTY0LTUzRTY2Q0E4M0ExNH06"
+            "cache-control": "no-cache"
         })
         let request = {
             url: params.sub_url,
             method: params.method,
             headers: authHeader(),
-            data: typeof params.data !== 'undefined' ? JSON.stringify(params.data) : {}
+            processData: false,
+            data: typeof params.data !== 'undefined' ? params.data : {}
         }
+
         console.log("sending data:", request);
-
-        // const url = "https://walmart.com/ip/50676589"
-        // var config = { proxy: { host: proxy.ip, port: proxy.port } }
-
-        // axios.get(url, config)
-        // .then(result => {})
-        // .catch(error => {console.log(error)})
 
         axios(request).then((res) => {
             if (res.data && res.data.user) {
@@ -92,10 +85,23 @@ const WammoPayAPI = {
     },
 
     getToken(data, callback){
+
+        // const url = 'http://192.168.90.251:8764/common/dotLogController/sendLog';
+        // axios.post(
+        //     url,
+        //     {
+        //         topic: 'topic',
+        //         logs: fakeData, // look ma, no JSON.stringify()!
+        //     }
+        // );
+        // const dt = JSON.stringify({"data":{"value":"gdfg1df2g2121dgfdg"}});
+        // const responsedata = axios.post('https://api.wammopay.com/v1/tokens', data);
+        // const responsedata = axios.post('https://api.medlanes.com/booking_center/call/get_products', data);
+        // console.log("what's response:", responsedata);
         this.baseApi(
             {
                 sub_url: 'v1/tokens',
-                method: 'POST',
+                method: "POST",
                 data: data
             },
             (err, res) => {

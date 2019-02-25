@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import CreditCardInput from 'react-credit-card-input';
+import ReactPhoneInput from 'react-phone-input-2'
+
 
 import './popup.css';
 import Api from '../../api/api';
@@ -69,104 +71,6 @@ class PopUp extends Component{
         this.setState({ State: val });
     }
 
-    getExpMonthYear(e){
-
-        this.setState({ExpirationDate: e.target.value});
-
-        // var c_val = e.target.value;
-        
-        // this.setState({ExpirationMonth: ""});
-        // this.setState({ExpirationYear: ""});
-
-        // if(c_val.length === 1){
-        //     this.setState({ExpirationMonth: c_val});
-        // } else if(c_val.length === 2){
-        //     if(parseInt(c_val)>12)
-        //         this.setState({ExpirationMonth: "12"});
-        //     else
-        //         this.setState({ExpirationMonth: c_val});
-        // } else if(c_val.length > 2){
-        //     var ind = c_val.indexOf('/');
-        //     if(ind == -1){
-        //         if(parseInt(c_val.substring(0,2))>12)
-        //             ind = 1;
-        //         else
-        //             ind = 2;
-        //     }else {
-        //         var year = c_val.substring(ind);
-        //         this.setState({ExpirationYear: year});
-        //     }
-        // }
-
-        // if (c_val.match(/^\d{2}$/) !== null) {
-        //     console.log("parsed:", parseInt(c_val));
-        //     if(isNaN(c_val)){
-        //         c_val = "";
-        //     }
-        //     if(parseInt(c_val)>12)
-        //         c_val = "12";
-        //     else if(parseInt(c_val)<1)
-        //         c_val = "01";
-        //     this.setState({ExpirationMonth: c_val});
-        //     c_val = c_val + '/';
-        // }
-        // var t_year = c_val.substring(3);
-        // console.log(t_year);
-        // if(isNaN(t_year)){
-        //     t_year = "2018";
-        // }
-        // if(t_year.length == 4){
-        //     if(parseInt(t_year)<2018){
-        //         t_year = "2018";
-        //         this.setState({ExpirationYear: 2018});
-        //     } else if(parseInt(t_year)>2099){
-        //         t_year = "2099";
-        //         this.setState({ExpirationYear: "2099"});
-        //     }
-        // }
-        // expireDate.val(c_val.substring(0,3) + t_year);
-    }
-
-    setCardNumber(e){
-        var result = "";
-        var temp = e.target.value;
-        if(temp.length < 4){
-            result = temp;
-        } else
-        if(temp.length === 4){
-            result = temp + " ";
-        } else
-        if(temp.length>4){
-            result = temp.substring(0,5);
-            for(var i=4 ; i < temp.length ; i++){
-                if(temp[i] != ' ')
-                    result = result + temp[i];
-                if((i+1)%5 === 0){
-                    result = result + " ";
-                }
-            }
-        }
-
-        if(result.length>19)
-            result = result.substring(0,20);
-        
-        this.setState({CardNumber: result});
-    }
-
-    deleteCardNumber(e){
-        if (e.keyCode === 8) {
-            var result = this.state.CardNumber;
-            if(result[result.length-1] === " ")
-            {
-                if(result[result.length-2] === " ")
-                    result = result.substring(0,result.length-2);
-                else
-                    result = result.substring(0,result.length-1);
-            }    
-            this.setState({CardNumber: result});
-        }
-    }
-
     sendRequest() {
         var c_val = this.state.ExpirationDate;
         var ind = c_val.indexOf('/');
@@ -182,31 +86,33 @@ class PopUp extends Component{
             }    
             // this.setState({ExpirationMonth: c_val.substring(0,ind)});
             month = c_val.substring(0,ind);
-            if(parseInt(c_val.substring(ind)) < 2019)
+            if(parseInt(c_val.substring(ind)) < 19)
                 // this.setState({ExpirationMonth: "2019"});
                 year = "2019";
-            else if(parseInt(c_val.substring(ind)) > 2099)
-                // this.setState({ExpirationYear: "2099"});
-                year = "2099";
-            else
+            else 
+            // if(parseInt(c_val.substring(ind)) > 99)
+            //     // this.setState({ExpirationYear: "2099"});
+            //     year = "2099";
+            // else
                 // this.setState({ExpirationYear: c_val.substring(ind)});
-                year = c_val.substring(ind);
+                year = "20" + c_val.substring(ind);
         }else {
             // this.setState({ExpirationMonth: c_val.substring(0,ind)});
             month = c_val.substring(0,ind);
             console.log(c_val.substring(0, ind), ind);
-            var year = c_val.substring(ind+1);
+            var year = "20" + c_val.substring(ind+1).replace(/\s/g, '');
             console.log(c_val.substring(ind+1), ind);
             this.setState({ExpirationYear: year});
         }
 
         console.log(this.data);
+        var mCardnumber = this.state.CardNumber.replace(/\s/g, '');
         var tokenReqJson = {
-            payment_processor: 1,
+            payment_processor: 2,
             card: {
                 exp_year: year,
                 exp_month: month,
-                number: this.state.CardNumber,
+                number: mCardnumber,
                 currency: this.data.Charge.currency,
                 cvc: this.state.CVV,
                 address_city: this.state.City,
@@ -251,7 +157,7 @@ class PopUp extends Component{
                         gateway_type: "test"
                     }
                 }
-                Api.getGatewayId(this.state, (err, res)=>{
+                Api.getGatewayId(gatewayReqJson, (err, res)=>{
                     if(err || !res){
                         let _err = [];
                         try {
@@ -286,7 +192,7 @@ class PopUp extends Component{
                                 payment_gateway_id: gatewayResJson.id
                             }
                         }
-                        Api.getChageTrasaction(this.state, (err, res)=>{
+                        Api.getChageTrasaction(transactionReqJson, (err, res)=>{
                             if(err || !res){
                                 let _err = [];
                                 try {
@@ -340,7 +246,7 @@ class PopUp extends Component{
                     <div>
                         <a onClick={this.bringBack} id="close_btn" title="Close" className="close">X</a>
                         <div className="c-header">
-                            <img src={require('../../assets/img/WPayLowRes.png')} alt="WammoPay" className="wammo-popup-logo"/>
+                            <img src={require('../../assets/img/logo.svg')} alt="WammoPay" className="wammo-popup-logo"/>
                         </div>
                         <div className="b-row">
                             <label>Email</label>
@@ -373,7 +279,12 @@ class PopUp extends Component{
                         </div>
                         <div className="b-row">
                             <label>Phone</label>
-                            <input type="text" placeholder="Enter Phone Number" id="userPhone" name="userPhone" value={Phone} onChange={(e)=>this.setState({Phone: e.target.value})}/>
+                            {/* <input type="text" placeholder="Enter Phone Number" id="userPhone" name="userPhone" value={Phone} onChange={(e)=>this.setState({Phone: e.target.value})}/> */}
+                            <ReactPhoneInput
+                                defaultCountry={'us'}
+                                value={Phone}
+                                onChange={(val) => this.setState({Phone: val})}
+                            />
                         </div>
                         {/* <div className="b-row">
                             <label>CardNumber</label>
@@ -393,7 +304,7 @@ class PopUp extends Component{
                                         position: 'absolute',
                                         left: '25%',
                                         border: '1px solid #aaa',
-                                        height: '8%',
+                                        height: '6%',
                                         width: '60%',
                                         'border-radius': '4px',
                                         outline: 'none',
@@ -409,21 +320,21 @@ class PopUp extends Component{
                                 cardExpiryInputProps={{ value: ExpirationDate, onChange: e => this.setState({ExpirationDate: e.target.value}) }}
                                 cardCVCInputProps={{ value: CVV, onChange: e => this.setState({CVV: e.target.value}) }}
                                 fieldClassName="input"
-                                customTextLabels={{
-                                    invalidCardNumber: 'Invalid card Number',
-                                    expiryError: {
-                                        invalidExpiryDate: 'Expiration date is invalid',
-                                        monthOutOfRange: 'input correct month: 01-12',
-                                        yearOutOfRange: 'input year between 2019-2099',
-                                        dateOutOfRange: 'date out of range'
-                                    },
-                                    invalidCvc: 'invalid cvc',
-                                    invalidZipCode: 'invalid zip code',
-                                    cardNumberPlaceholder: '4242 4242 4242 4242',
-                                    expiryPlaceholder: 'MM/YY',
-                                    cvcPlaceholder: '706',
-                                    zipPlaceholder: '473005'
-                                }}
+                                // customTextLabels={{
+                                //     invalidCardNumber: 'Invalid card Number',
+                                //     expiryError: {
+                                //         invalidExpiryDate: 'Expiration date is invalid',
+                                //         monthOutOfRange: 'input correct month: 01-12',
+                                //         yearOutOfRange: 'input year between 2019-2099',
+                                //         dateOutOfRange: 'date out of range'
+                                //     },
+                                //     invalidCvc: 'invalid cvc',
+                                //     invalidZipCode: 'invalid zip code',
+                                //     cardNumberPlaceholder: '4242 4242 4242 4242',
+                                //     expiryPlaceholder: 'MM/YY',
+                                //     cvcPlaceholder: '706',
+                                //     zipPlaceholder: '473005'
+                                // }}
                             />
                         </div>
                         
@@ -432,7 +343,6 @@ class PopUp extends Component{
                                 <label> <input type="checkbox"/> <span>Remember Me</span> </label>
                             </div>
                         </div>
-                        
                         <input type="button" id="pay-button" value="Pay $20,50.00" onClick={this.sendRequest} />
                     </div>
                 </div>

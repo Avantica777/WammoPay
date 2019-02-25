@@ -166,80 +166,6 @@ body, ul {
 	-webkit-font-smoothing: antialiased;
 }
 
-.btn-panel-container{
-	padding-left: 15%;
-    padding-right: 15%;
-    margin-right: auto;
-    margin-left: auto;
-	box-sizing: content-box;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	min-width: 600px;
-}
-
-.btn-panel-container .btn-panel-pane-left{
-    width: 49%;
-}
-
-.btn-panel-container .btn-panel-pane-right{
-    width: 49%;
-}
-
-.btn-panel-container [class*=btn-panel-pane-] {
-	float: left;
-    min-height: 1px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.build-btn-panel{
-	float: left;
-	width: 100%;
-	padding: 90px 0px;
-	background: #fff;
-    position: relative;
-    z-index: 2;
-    transform: translate(0,0);
-}
-
-.containerCentered {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-	margin-right: auto;
-    margin-left: auto;
-}
-
-.build-btn-panel [class*=span]:last-child:not(.btn) {
-    padding-right: 0;
-}
-
-.build-btn-panel [class*=span]:not(.btn) {
-    padding-right: 2%;
-}
-.build-btn-panel [class*=span]:first-child {
-    margin-left: 0;
-}
-.build-btn-panel .span12 {
-    width: 100%;
-}
-.build-btn-panel [class*=span] {
-    float: left;
-    margin-left: 2%;
-    min-height: 1px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.container:after, .containerCentered:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.build-btn-panel .span6 {
-    width: 49%;
-}
-
 .contentPara{
 	font-size: 14px;
 }
@@ -257,153 +183,6 @@ body, ul {
     display: inline-block;
     margin: 0 6px 0 0;
     padding-left: 10px;
-}
-
-.page-footer{
-    padding: 40px 0;
-    z-index: 2;
-    background: #fff;
-    text-align: left;
-    transform: translate(0,0);
-}
-
-.containerCentered {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-.container, .containerCentered {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.page-footer ul {
-    display: block;
-    clear: both;
-    margin: 0;
-}
-
-html[data-device-type=dedicated] .page-footer .footer-secondary, html[data-device-type=dedicated] .page-footer .footer-tertiary {
-    padding-top: 8px;
-}
-html[data-device-type=dedicated] .page-footer .footer-search, html[data-device-type=dedicated] .page-footer .footer-secondary {
-    float: left;
-}
-
-.footer-main{
-	border-bottom: 1px dotted;
-}
-
-ul.footer-main li {
-	margin: 0;
-	font-size: 16px;
-}
-
-.page-footer ul li {
-    display: inline-block;
-    list-style-type: none;
-    line-height: 26px;
-    vertical-align: middle;
-    margin: 0 18px 0 0;
-}
-
-.secondaryLink a:not(.btn), a.secondaryLink {
-	color: #666;
-}
-.page-footer ul li a {
-    display: block;
-    padding: 9px 0;
-    font-weight: 700;
-    text-decoration: none;
-}
-.footer-main li a {
-    margin: 0 26px 0 0;
-}
-
-.secondaryLink a:active:not(.btn), .secondaryLink a:focus:not(.btn), .secondaryLink a:hover:not(.btn), a.secondaryLink:active, a.secondaryLink:focus, a.secondaryLink:hover {
-    color: #444;
-    text-decoration: underline;
-}
-.page-footer .footer-copyright, .page-footer .footer-secondary li a, .page-footer .footer-tertiary li a {
-    font-weight: 400;
-    font-size: 12px;
-    padding: 0;
-}
-
-hr {
-    background-image: linear-gradient(to right,silver 50%,rgba(255,255,255,0) 40%);
-    background-position: top;
-    background-size: 3px 1px;
-    background-repeat: repeat-x;
-    height: 1px;
-    border-top: 0;
-    border-bottom: 0;
-}
-hr {
-    border-left: 0;
-    border-right: 0;
-    margin: 0;
-}
-hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    overflow: hidden;
-    border-style: inset;
-    border-width: 1px;
-}
-
-.country-selector {
-    float: right;
-	text-align: right;
-	margin-top: 8px !important;
-}
-
-.country-selector .US, .country-selector .unitedstates {
-    background-position: 5px -383px;
-}
-
-.country-selector .country {
-    display: inline-block;
-    overflow: hidden;
-    width: 32px;
-    height: 24px;
-    padding: 0;
-    margin: 0;
-    vertical-align: middle;
-    text-indent: -999em;
-    text-align: left;
-	background-repeat: no-repeat;
-    /* background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat; */
-    background-color: transparent;
-}
-
-.wammopay-logo {
-	display: inline-block;
-	width: 136px;
-	height: 43px;
-	overflow: hidden;
-	text-indent: -999em;
-	background: transparent url("../../../assets/img/WPayLowRes.png") center center no-repeat;
-	background-size: 90pt 45px;
-	vertical-align: middle;
-	padding-top: 5px;
-	margin-top: -7px; 
-	position: absolute;
-	top: 21px; 
-	left: 25px;
-}
-
-.wammopay-logo-wrapper{
-	width: auto;
-	display: inline-block;
 }
 
 @media screen and (min-width:991px){
@@ -432,100 +211,6 @@ hr {
 		padding-right: .9375rem;
 	}
 
-	.wammopay-logo {
-		display: inline-block;
-		width: 136px;
-		height: 43px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url("../../../assets/img/WPayLowRes.png") center center no-repeat;
-		background-size: 90pt 45px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px; 
-		position: absolute;
-		top: 21px; 
-		left: 25px;
-	}
-
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
-
-	.main-menu ul:after {
-		content: " ";
-		display: block;
-		font-size: 0;
-		height: 0;
-		clear: both;
-		visibility: hidden;
-	}
-
-	.main-menu ul li {
-		display: inline-block;
-		padding: 0;
-		margin: 0;
-	}
-
-	.main-menu.align-right ul li {
-		float: right;
-	}
-	.main-menu.align-center ul {
-		text-align: center;
-	}
-	.main-menu ul li a {
-		color: #ffffff;
-		text-decoration: none;
-		display: block;
-		/* padding: 15px 25px; */
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 14px;
-		position: relative;
-		-webkit-transition: color .25s;
-		-moz-transition: color .25s;
-		-ms-transition: color .25s;
-		-o-transition: color .25s;
-		transition: color .25s;
-	}
-	.main-menu ul li a:hover:before {
-		width: 100%;
-	}
-	.main-menu > ul > li > a:before {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		height: 3px;
-		width: 0;
-		background: #fff;
-		-webkit-transition: width .25s;
-		-moz-transition: width .25s;
-		-ms-transition: width .25s;
-		-o-transition: width .25s;
-		transition: width .25s;
-	}
-
-	.main-menu ul li.last > a:after,
-	.main-menu ul li:last-child > a:after {
-		display: none;
-	}
-	.main-menu ul li.active a {
-		color: rgb(135, 161, 146);
-	}
-	.main-menu ul li.active a:before {
-		width: 100%;
-	}
-	.main-menu.align-right li.last > a:after,
-	.main-menu.align-right li:last-child > a:after {
-		display: block;
-	}
-	.main-menu.align-right li:first-child a:after {
-		display: none;
-	}
 	html[data-device-type=dedicated] .containerCentered {
 		padding-left: 3%;
 		padding-right: 3%;
@@ -535,37 +220,6 @@ hr {
 		max-width: 990px;
 		margin: 0 auto;
 		overflow: hidden;
-	}
-}
-
-@media screen and (max-width:1350px){
-	.wammopay-logo {
-		display: inline-block;
-		width: 136px;
-		height: 43px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url("../../../assets/img/WPayLowRes.png") center center no-repeat;
-		background-size: 90pt 45px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px; 
-		position: absolute;
-		top: 21px; 
-		left: 50%;
-	}
-	
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
-
-	header::after{
-		width: 100%;
-		position: absolute;
-		border-bottom: 1px solid rgba(255,255,255,.3);
-		top: 72px;
-		box-sizing: inherit;  
 	}
 }
 
@@ -612,27 +266,6 @@ hr {
 		margin: 8px;
 	}
 
-	.wammopay-logo {
-		display: inline-block;
-		width: 136px;
-		height: 43px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url("../../../assets/img/WPayLowRes.png") center center no-repeat;
-		background-size: 90pt 45px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px; 
-		position: absolute;
-		top: 21px; 
-		left: 40%;
-	}
-	
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
-  
 	#openPageslide {
 	  display: block;
 	  padding: 0px 10px;
@@ -697,26 +330,6 @@ hr {
 		margin: 54px auto;
 		overflow: hidden;
 	}
-	.wammopay-logo {
-		display: inline-block;
-		width: 136px;
-		height: 43px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url("../../../assets/img/WPayLowRes.png") center center no-repeat;
-		background-size: 90pt 45px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px; 
-		position: absolute;
-		top: 21px; 
-		left: 25%;
-	}
-	
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
 
 	.accordion .card .card-header h5 {
 		font-size: 14px;
@@ -770,22 +383,6 @@ hr {
 		overflow: hidden;
 	}
 
-	.wammopay-logo {
-		display: inline-block;
-		width: 69px;
-		height: 45px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url(../../../assets/img/WPayLowRes.png) center center no-repeat;
-		background-size: 50pt 25px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px;
-		position: absolute;
-		top: 21px;
-		left: 75px;
-	}
-
 	.modalDialog {
 		position: fixed;
 		font-family: Arial, Helvetica, sans-serif;
@@ -836,17 +433,6 @@ hr {
 	.dlg-comment {
 		margin: 48px 0px;
 	}
-	
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
-
-	.page-footer .footer-copyright, .page-footer .footer-secondary li a, .page-footer .footer-tertiary li a {
-		font-weight: 400;
-		font-size: 10px;
-		padding: 0;
-	}
 
 	.btn-panel-heading > h2{
 		color:rgb(44, 46, 47);
@@ -871,16 +457,6 @@ hr {
 		-webkit-font-smoothing:antialiased;
 	}
 
-	.btn-panel-container{
-		padding-left: 15%;
-		padding-right: 15%;
-		margin-right: auto;
-		margin-left: auto;
-		box-sizing: content-box;
-		margin-top: 60px;
-		margin-bottom: 30px;
-		min-width: 600px;
-	}
 }
 
 h1 { margin:30px auto; text-align:center;}

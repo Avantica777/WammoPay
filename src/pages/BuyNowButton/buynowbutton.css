@@ -430,27 +430,6 @@ hr {
     background-color: transparent;
 }
 
-.wammopay-logo {
-	display: inline-block;
-	width: 136px;
-	height: 43px;
-	overflow: hidden;
-	text-indent: -999em;
-	background: transparent url("../../assets/img/WPayLowRes.png") center center no-repeat;
-	background-size: 90pt 45px;
-	vertical-align: middle;
-	padding-top: 5px;
-	margin-top: -7px; 
-	position: absolute;
-	top: 21px; 
-	left: 25px;
-}
-
-.wammopay-logo-wrapper{
-	width: auto;
-	display: inline-block;
-}
-
 /**********************Modal Dialog CSS*****************************/
 
 .modalDialog{
@@ -556,100 +535,6 @@ hr {
 		padding-right: .9375rem;
 	}
 
-	.wammopay-logo {
-		display: inline-block;
-		width: 136px;
-		height: 43px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url("../../assets/img/WPayLowRes.png") center center no-repeat;
-		background-size: 90pt 45px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px; 
-		position: absolute;
-		top: 21px; 
-		left: 25px;
-	}
-
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
-
-	.main-menu ul:after {
-		content: " ";
-		display: block;
-		font-size: 0;
-		height: 0;
-		clear: both;
-		visibility: hidden;
-	}
-
-	.main-menu ul li {
-		display: inline-block;
-		padding: 0;
-		margin: 0;
-	}
-
-	.main-menu.align-right ul li {
-		float: right;
-	}
-	.main-menu.align-center ul {
-		text-align: center;
-	}
-	.main-menu ul li a {
-		color: #ffffff;
-		text-decoration: none;
-		display: block;
-		/* padding: 15px 25px; */
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 14px;
-		position: relative;
-		-webkit-transition: color .25s;
-		-moz-transition: color .25s;
-		-ms-transition: color .25s;
-		-o-transition: color .25s;
-		transition: color .25s;
-	}
-	.main-menu ul li a:hover:before {
-		width: 100%;
-	}
-	.main-menu > ul > li > a:before {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		height: 3px;
-		width: 0;
-		background: #fff;
-		-webkit-transition: width .25s;
-		-moz-transition: width .25s;
-		-ms-transition: width .25s;
-		-o-transition: width .25s;
-		transition: width .25s;
-	}
-
-	.main-menu ul li.last > a:after,
-	.main-menu ul li:last-child > a:after {
-		display: none;
-	}
-	.main-menu ul li.active a {
-		color: rgb(135, 161, 146);
-	}
-	.main-menu ul li.active a:before {
-		width: 100%;
-	}
-	.main-menu.align-right li.last > a:after,
-	.main-menu.align-right li:last-child > a:after {
-		display: block;
-	}
-	.main-menu.align-right li:first-child a:after {
-		display: none;
-	}
 	html[data-device-type=dedicated] .containerCentered {
 		padding-left: 3%;
 		padding-right: 3%;
@@ -659,37 +544,6 @@ hr {
 		max-width: 990px;
 		margin: 0 auto;
 		overflow: hidden;
-	}
-}
-
-@media screen and (max-width:1350px){
-	.wammopay-logo {
-		display: inline-block;
-		width: 136px;
-		height: 43px;
-		overflow: hidden;
-		text-indent: -999em;
-		background: transparent url("../../assets/img/WPayLowRes.png") center center no-repeat;
-		background-size: 90pt 45px;
-		vertical-align: middle;
-		padding-top: 5px;
-		margin-top: -7px; 
-		position: absolute;
-		top: 21px; 
-		left: 50%;
-	}
-	
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
-
-	header::after{
-		width: 100%;
-		position: absolute;
-		border-bottom: 1px solid rgba(255,255,255,.3);
-		top: 72px;
-		box-sizing: inherit;  
 	}
 }
 
@@ -805,11 +659,6 @@ hr {
 	.dlg-comment {
 		margin: 48px 0px;
 	}
-	
-	.wammopay-logo-wrapper{
-		width: auto;
-		display: inline-block;
-	}
 
 	.page-footer .footer-copyright, .page-footer .footer-secondary li a, .page-footer .footer-tertiary li a {
 		font-weight: 400;
@@ -841,8 +690,8 @@ hr {
 	}
 
 	.btn-panel-container{
-		padding-left: 15%;
-		padding-right: 15%;
+		padding-left: 5%;
+		padding-right: 5%;
 		margin-right: auto;
 		margin-left: auto;
 		box-sizing: content-box;

@@ -6,15 +6,20 @@ import WammoHeader from '../Layouts/WammoBuyNow/WammoBNHeader/WammoHeader'
 class AlertDialog extends Component{
     constructor(props) {
         super(props)
+        this.gotoWammo = this.gotoWammo.bind(this);
     }
 
+    gotoWammo() {
+        // do something meaningful, Promises, if/else, whatever, and then
+        window.location.assign('https://wammo.io');
+    }
     render() {
         return(
             <div>
                 <WammoHeader/>
                 <div className="thank-container">
                     <div className="thank-header">
-                        <img src={require('../../assets/img/WPay.png')} alt="WammoPay" className="wammp-avatar"/>
+                        <img src={require('../../assets/img/logo.svg')} alt="WammoPay" className="wammp-avatar"/>
                     </div>
                     <div className="thank-body">
                         <img src={require('../../assets/img/success.svg')}>
@@ -23,7 +28,7 @@ class AlertDialog extends Component{
                         <p>
                             Thank You for Purchasing
                         </p>
-                        <a href="#">
+                        <a onClick={this.gotoWammo} target="_blank">
                             Back to Home
                         </a>
                     </div>
